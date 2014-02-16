@@ -15,6 +15,7 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -43,6 +44,7 @@ public class OrderColumnTest {
 	}
 
 	@Test
+	@Ignore
 	@UsingDataSet({ "ordercolumn/add/dept.yml", "ordercolumn/add/employee.yml" })
 	@ShouldMatchDataSet(value = { "ordercolumn/add/expected-employee.yml" }, orderBy = "pos", excludeColumns = "id")
 	public void add() throws Exception {
@@ -77,5 +79,12 @@ public class OrderColumnTest {
 		Assert.assertEquals(0, employees.get(0).getPos().longValue());
 		Assert.assertEquals(1, employees.get(1).getPos().longValue());
 		Assert.assertEquals(2, employees.get(2).getPos().longValue());
+	}
+	
+	@Test
+	@UsingDataSet({ "ordercolumn/reverse/dept.yml", "ordercolumn/reverse/employee.yml" })
+	@ShouldMatchDataSet(value = { "ordercolumn/reverse/expected-employee.yml" }, orderBy = "pos", excludeColumns = "id")
+	public void reverse() throws Exception {
+		testDataManipulator.reverse(101l);
 	}
 }

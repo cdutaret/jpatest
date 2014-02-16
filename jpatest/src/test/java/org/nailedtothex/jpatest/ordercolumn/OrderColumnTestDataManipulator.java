@@ -101,7 +101,22 @@ public class OrderColumnTestDataManipulator {
 		log.log(Level.FINE, "{0}", new Object[] { dept.getEmployees() });
 	}
 
-	public List<Employee> findEmployees(long deptId){
+	@Transactional
+	public void reverse(long deptId) {
+		Dept dept = em.find(Dept.class, deptId);
+
+		List<Employee> oldEmployees = dept.getEmployees();
+		List<Employee> newEmployees = new ArrayList<>(dept.getEmployees().size());
+
+		for (int i = 0; i < oldEmployees.size(); i++) {
+			Employee emp = oldEmployees.get(oldEmployees.size() - 1 - i);
+			newEmployees.add(emp);
+		}
+
+		dept.setEmployees(newEmployees);
+	}
+
+	public List<Employee> findEmployees(long deptId) {
 		Dept dept = em.find(Dept.class, deptId);
 		dept.getEmployees().size();
 		log.log(Level.FINE, "{0}", new Object[] { dept.getEmployees() });
