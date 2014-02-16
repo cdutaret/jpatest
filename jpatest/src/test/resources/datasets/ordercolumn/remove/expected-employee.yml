@@ -1,0 +1,9 @@
+Employee:
+  - firstName: Taro
+    lastName: Yamada
+    dept_id: 101
+    pos: 0
+  - firstName: Saburo
+    lastName: Tanaka
+    dept_id: 101
+    pos: 1

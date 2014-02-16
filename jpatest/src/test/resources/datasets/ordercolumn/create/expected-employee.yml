@@ -1,0 +1,16 @@
+Employee:
+  - id: 2
+    firstName: Taro
+    lastName: Yamada
+    dept_id: 1
+    pos: 0
+  - id: 3
+    firstName: Jiro
+    lastName: Suzuki
+    dept_id: 1
+    pos: 1
+  - id: 4
+    firstName: Saburo
+    lastName: Tanaka
+    dept_id: 1
+    pos: 2
