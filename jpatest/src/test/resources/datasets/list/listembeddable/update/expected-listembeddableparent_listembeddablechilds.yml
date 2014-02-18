@@ -1,0 +1,13 @@
+listembeddableparent_listembeddablechilds:
+  - listembeddableparent_id: 1
+    embfield1: child1field1
+    embfield2: child1field2
+    listembeddablechilds_order: 0 
+  - listembeddableparent_id: 1
+    embfield1: child2field1-updated
+    embfield2: child2field2-updated
+    listembeddablechilds_order: 1
+  - listembeddableparent_id: 1
+    embfield1: child3field1
+    embfield2: child3field2
+    listembeddablechilds_order: 2

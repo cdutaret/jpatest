@@ -1,0 +1,10 @@
+ListBasicOrderColumn_List:
+  - listbasicordercolumn_id: 1
+    list: hige
+    list_order: 0
+  - listbasicordercolumn_id: 1
+    list: hoge
+    list_order: 1
+  - listbasicordercolumn_id: 1
+    list: hoge
+    list_order: 2

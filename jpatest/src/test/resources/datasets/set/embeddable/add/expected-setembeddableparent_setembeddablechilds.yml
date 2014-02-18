@@ -1,0 +1,13 @@
+setembeddableparent_setembeddablechilds:
+  - setembeddableparent_id: 1
+    embfield1: child1field1
+    embfield2: child1field2
+  - setembeddableparent_id: 1
+    embfield1: child2field1
+    embfield2: child2field2
+  - setembeddableparent_id: 1
+    embfield1: child3field1
+    embfield2: child3field2
+  - setembeddableparent_id: 1
+    embfield1: child4field1
+    embfield2: child4field2

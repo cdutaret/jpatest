@@ -1,0 +1,5 @@
+SetBasic_Set:
+  - setbasic_id: 1
+    set: fuge
+  - setbasic_id: 1
+    set: hoge

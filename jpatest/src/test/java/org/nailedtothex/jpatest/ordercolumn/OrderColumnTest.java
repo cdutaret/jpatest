@@ -38,6 +38,7 @@ public class OrderColumnTest {
 	OrderColumnTestDataManipulator testDataManipulator;
 
 	@Test
+	@UsingDataSet({ "ordercolumn/create/dept.yml", "ordercolumn/create/employee.yml" })
 	@ShouldMatchDataSet(value = { "ordercolumn/create/expected-dept.yml", "ordercolumn/create/expected-employee.yml" }, orderBy = "id", excludeColumns = "id")
 	public void create() throws Exception {
 		testDataManipulator.create();
